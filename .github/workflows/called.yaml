@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Say hello
         run: |
-          name=${{ inputs.username }}
+          name="${{ inputs.username }}"
           echo "Hello ${name:-Default Name}"
 
       - name: Output environment
