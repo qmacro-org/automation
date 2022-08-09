@@ -21,5 +21,6 @@ jobs:
         run: |
           curl \
           --verbose \
-          --data fruit="${{ secrets.ORG_SECRET_FRUT }}" \
+          --data fruit="${{ secrets.ORG_SECRET_FRUIT }}" \
+          --data word="testing" \
           --url "https://eoh36b4eqj7jblx.m.pipedream.net"
