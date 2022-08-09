@@ -1,0 +1,20 @@
+---
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      mysecret:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello ${{ inputs.username }}"
+
+      - name: Output environment
+        run: env
