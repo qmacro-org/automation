@@ -19,5 +19,9 @@ jobs:
           name="${{ inputs.username }}"
           echo "Hello ${name:-Default Name}"
 
+      - name: Test org secret
+        run: |
+          echo "Fruit: ${{ secrets.ORG_SECRET_FRUIT }}"
+
       - name: Output environment
         run: env
