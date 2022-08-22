@@ -12,10 +12,9 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
+      - name: Show file content
         run: |
-          name="${{ inputs.username }}"
-          echo "Hello ${name:-Default Name}"
+          cat .github/workflows/subdirectory/file.txt
 
       - name: Send info to request bin
         run: |
